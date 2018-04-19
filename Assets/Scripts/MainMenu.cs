@@ -14,12 +14,12 @@ public class MainMenu : MonoBehaviour
     private InputField inputField;
     [SerializeField]
     private Button okButton;
-    public string NameForZoo
-    {
-        get { return nameForZoo; }
-    }
+    
+
     private static string nameForZoo;
     private bool named;
+
+    
 
     // Use this for initialization
     void Start ()
@@ -47,9 +47,12 @@ public class MainMenu : MonoBehaviour
     {
         if (inputField.characterLimit == 15)
         {
-            named = true;
+            named = true;           
             nameForZoo = inputField.text;
+            DataHolding.NameOfTheZoo = nameForZoo;
             Debug.Log(nameForZoo);
+            Debug.Log(DataHolding.NameOfTheZoo);
+           
         }
         else
             named = false;
