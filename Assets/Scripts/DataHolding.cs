@@ -11,4 +11,18 @@ public static class DataHolding
         get { return nameOfTheZoo; }
         set { nameOfTheZoo = value; }
     }
+    private static float moneyGained;
+
+    public static float MoneyGained
+    {
+        get { return moneyGained; }
+        set { moneyGained = value; }
+    }
+    private static float foodGained;
+
+    public static float FoodGained
+    {
+        get { return foodGained; }
+        set { foodGained = value; }
+    }
 }
