@@ -25,4 +25,11 @@ public static class DataHolding
         get { return foodGained; }
         set { foodGained = value; }
     }
+    private static float medicalGained;
+
+    public static float MedicalGained
+    {
+        get { return medicalGained; }
+        set { medicalGained = value; }
+    }
 }
