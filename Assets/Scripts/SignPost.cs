@@ -26,10 +26,12 @@ public class SignPost : MonoBehaviour
         purchasePanel.SetActive(true);
         Time.timeScale = 0;
 
+
     }
     public void Close()
     {
         purchasePanel.SetActive(false);
         Time.timeScale = 1;
+
     }
 }
