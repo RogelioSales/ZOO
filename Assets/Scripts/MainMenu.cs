@@ -45,7 +45,7 @@ public class MainMenu : MonoBehaviour
     }
        public void InputText()
     {
-        if (inputField.characterLimit == 15)
+        if (inputField.characterLimit == 16)
         {
             named = true;           
             nameForZoo = inputField.text;
