@@ -6,8 +6,8 @@ public class MedicalCenter : MonoBehaviour
 {
     [SerializeField]
     private GameObject medicalBuildig;
-    [SerializeField]
-    private Text medicalCount;
+    
+    public Text medicalCount;
     [SerializeField]
     private float medical;
     [SerializeField]
@@ -37,7 +37,7 @@ public class MedicalCenter : MonoBehaviour
         medicalValue = (int)DataHolding.MedicalGained;
         medicalCount.text = medicalValue.ToString();
         medical= 0;
-        Debug.Log(DataHolding.MedicalGained);
+
     }
 
 }

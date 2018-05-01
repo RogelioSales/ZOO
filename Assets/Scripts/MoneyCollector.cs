@@ -7,8 +7,8 @@ public class MoneyCollector : MonoBehaviour
 {
     [SerializeField]
     private GameObject moneyBuildig;
-    [SerializeField]
-    private Text moneyCount;
+    
+    public Text moneyCount;
     [SerializeField]
     private float money;
     [SerializeField]
@@ -38,7 +38,7 @@ public class MoneyCollector : MonoBehaviour
         moneyValue = (int)DataHolding.MoneyGained;
         moneyCount.text = moneyValue.ToString();
         money = 0;
-        Debug.Log(DataHolding.MoneyGained);
+
     }
 
 }

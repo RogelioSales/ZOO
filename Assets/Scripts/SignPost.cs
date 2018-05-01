@@ -10,7 +10,11 @@ public class SignPost : MonoBehaviour
     [SerializeField]
     private Image selectedImage;
     [SerializeField]
+    private GameObject soldOut;
+    [SerializeField]
     private Text animalText;
+    [SerializeField]
+    private Button purchaseButton;
     [SerializeField]
     private List<SelectionScript> animalList;
    
@@ -20,21 +24,37 @@ public class SignPost : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        purchasePanel.SetActive(false);   
+        purchasePanel.SetActive(false);
+        soldOut.SetActive(false);
    
+    } 
+    private void Refresh()
+    {
+        for(int i = 0; i < animalList.Count; i++)
+        {
+            SelectionScript selection = animalList[i];
+        }
     }
-   
-
     // Update is called once per frame
     void Update()
     {
-
+        Refresh();
     }
     public void Purchase()
     {
-        
-        AnimalRemoved(animalList[itemSpot],this);
-        purchasePanel.SetActive(false);
+        SelectionScript selection = animalList[itemSpot];
+        if (DataHolding.MoneyGained >= selection.price)
+        {
+            DataHolding.MoneyGained -= selection.price;
+            soldOut.SetActive(true);
+            AnimalRemoved(animalList[itemSpot], this);
+            purchasePanel.SetActive(false);
+            
+        }
+        else
+        {
+
+        }
     }
     public void LeftClick()
     {
@@ -44,6 +64,8 @@ public class SignPost : MonoBehaviour
             SelectionScript selection = animalList[itemSpot];
             animalText.text = selection.animalName;
             selectedImage.sprite = selection.icon;
+            purchaseButton.interactable = true;
+            soldOut.SetActive(false);
         }
     }
     public void RightClick()
@@ -54,15 +76,16 @@ public class SignPost : MonoBehaviour
             SelectionScript selection = animalList[itemSpot];
             animalText.text = selection.animalName;
             selectedImage.sprite = selection.icon;
+            purchaseButton.interactable = true;
+            soldOut.SetActive(false);
         }
     }
-
     public void Open()
     {
         purchasePanel.SetActive(true);
         Time.timeScale = 0;
-
-
+        purchaseButton.interactable = false;
+        
     }
     public void Close()
     {

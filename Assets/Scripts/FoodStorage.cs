@@ -6,8 +6,8 @@ public class FoodStorage : MonoBehaviour
 {
     [SerializeField]
     private GameObject foodBuildig;
-    [SerializeField]
-    private Text foodCount;
+  
+    public Text foodCount;
     [SerializeField]
     private float food;
     [SerializeField]
@@ -39,6 +39,6 @@ public class FoodStorage : MonoBehaviour
         foodValue = (int)DataHolding.FoodGained;
         foodCount.text = foodValue.ToString();
         food = 0;
-        Debug.Log(DataHolding.FoodGained);
+
     }
 }

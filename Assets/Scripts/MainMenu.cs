@@ -50,8 +50,8 @@ public class MainMenu : MonoBehaviour
             named = true;           
             nameForZoo = inputField.text;
             DataHolding.NameOfTheZoo = nameForZoo;
-            Debug.Log(nameForZoo);
-            Debug.Log(DataHolding.NameOfTheZoo);
+        
+
            
         }
         else

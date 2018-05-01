@@ -32,4 +32,22 @@ public static class DataHolding
         get { return medicalGained; }
         set { medicalGained = value; }
     }
+    private static float audienceCount;
+    public static float AudienceCount
+    {
+        get { return audienceCount; }
+        set { audienceCount = value; }
+    }
+    private static string zebra;
+    public static string Zebra
+    {
+        get { return zebra; }
+        set { zebra = value; }
+    }
+    private static string lion;
+    public static string Lion
+    {
+        get { return lion; }
+        set { lion = value; }
+    }
 }
