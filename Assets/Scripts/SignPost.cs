@@ -54,6 +54,7 @@ public class SignPost : MonoBehaviour
             soldOut.SetActive(true);
             AnimalRemoved(animalList[itemSpot], this);
             purchasePanel.SetActive(false);
+
             //for (int i = 0; i < buttons.Length; i++)
             //{
             //    i = 0;
