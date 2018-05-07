@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     private int audienceValue;
     private bool isHappy;
     private bool isOver;
+
+
     private void Awake()
     {
         money = FindObjectOfType<MoneyCollector>();
@@ -39,7 +41,7 @@ public class GameManager : MonoBehaviour
         DataHolding.MoneyGained = 30;
         DataHolding.FoodGained = 10;
         DataHolding.MedicalGained = 5;
-        DataHolding.AudienceCount = 76;
+        DataHolding.AudienceCount = 20;
 
         audienceValue = (int)DataHolding.AudienceCount;
         moneyValue = (int)DataHolding.MoneyGained;
@@ -60,61 +62,36 @@ public class GameManager : MonoBehaviour
         medicine.medicalCount.text = medicineValue.ToString();
         food.foodCount.text = foodValue.ToString();
         money.moneyCount.text = moneyValue.ToString();
-
-        while(audience < 75f)
+        if (audienceValue < 75f)
         {
             audience -= audienceLoss * Time.deltaTime;
             audienceValue = (int)audience;
-            if (audience == minaudience)
+            DataHolding.AudienceCount = audience + DataHolding.AudienceCount;
+            audienceValue = (int)DataHolding.AudienceCount;
+            audienceText.text = audienceValue.ToString();
+            audience = 0;
+            if (DataHolding.AudienceCount <= minaudience)
             {
-                isHappy = true;
-                Debug.Log(true);
-                DataHolding.AudienceCount = minaudience;
+                Debug.Log("Lost");
                 SceneManager.LoadScene(0);
             }
         }
-        while (audience > 75f)
+        else if (DataHolding.AudienceCount > 75f)
         {
-            audience += audienceLoss * Time.deltaTime;
+            audience += audienceGained * Time.deltaTime;
             audienceValue = (int)audience;
-            if (audience == maxaudience)
+            DataHolding.AudienceCount = audience + DataHolding.AudienceCount;
+            audienceValue = (int)DataHolding.AudienceCount;
+            audienceText.text = audienceValue.ToString();
+            audience = 0;
+            if (DataHolding.AudienceCount >= maxaudience)
             {
-                isHappy = true;
-                Debug.Log(true);
-                DataHolding.AudienceCount = maxaudience;
+                Debug.Log("Won");
                 SceneManager.LoadScene(0);
-
             }
         }
-       
-        //if (audience < 75f)
-        //{
-        //    audience -= audienceLoss * Time.deltaTime;
-        //    audienceValue = (int)audience;
-           
-        //}
-        //else if (audience == minaudience)
-        //{
-        //    isHappy = true;
-        //    Debug.Log(true);
-        //    DataHolding.AudienceCount = minaudience;
-        //    SceneManager.LoadScene(0);
-        //}
-        //else if (audience > 75f)
-        //{
-        //    audience += audienceGained * Time.deltaTime;
-        //    audienceValue = (int)audience;
-        //}
-        //else if (DataHolding.AudienceCount == maxaudience)
-        //{
-        //    DataHolding.AudienceCount = maxaudience;
-        //    SceneManager.LoadScene(0);
-        //}
-        DataHolding.AudienceCount = audience + DataHolding.AudienceCount;
-        audienceValue = (int)DataHolding.AudienceCount;
-        audienceText.text = audienceValue.ToString();
-        audience = 0;
-
+        
     }
+ 
 
 }
