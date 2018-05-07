@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class SignPost : MonoBehaviour
 {
-    public GameObject signPostSprite;
-    public Transform spawnPoint;
+    public GameObject[] buttons;
     [SerializeField]
     private GameObject purchasePanel;
     [SerializeField]
@@ -52,10 +51,37 @@ public class SignPost : MonoBehaviour
         {
             DataHolding.MoneyGained -= selection.price;
             DataHolding.AudienceCount++;
- 
             soldOut.SetActive(true);
             AnimalRemoved(animalList[itemSpot], this);
-            purchasePanel.SetActive(false);            
+            purchasePanel.SetActive(false);
+            //for (int i = 0; i < buttons.Length; i++)
+            //{
+            //    i = 0;
+            //    if (i == 0)
+            //    {                  
+            //    // GameObject animalBuildin = Instantiate(selection.animalBuilding, new Vector2(2, 2), Quaternion.Euler(2,3,5));
+            //        AnimalRemoved(animalList[itemSpot], this);
+            //        purchasePanel.SetActive(false);
+            //    }
+            //    else if (i == 1 )
+            //    {
+            //        AnimalRemoved(animalList[itemSpot], this);
+            //        purchasePanel.SetActive(false);
+            //    }
+            //    else if (i == 2)
+            //    {
+            //        AnimalRemoved(animalList[itemSpot], this);
+            //        purchasePanel.SetActive(false);
+            //    }
+            //    else if (buttons[3])
+            //    {
+            //        AnimalRemoved(animalList[itemSpot], this);
+            //        purchasePanel.SetActive(false);
+            //    }
+            //    else if (buttons[4])
+            //    {
+            //    }
+            //}
         }
         else
         {

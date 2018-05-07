@@ -805,7 +805,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 994407614}
         m_MethodName: LeftClick
         m_Mode: 1
         m_Arguments:
@@ -1627,8 +1627,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750ba2b1c269d8c4a926a3515e88dd78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signPostSprite: {fileID: 0}
-  spawnPoint: {fileID: 0}
+  buttons:
+  - {fileID: 1742528832}
+  - {fileID: 1568459512}
+  - {fileID: 1445642110}
+  - {fileID: 1670161204}
+  - {fileID: 1141887661}
   purchasePanel: {fileID: 994407610}
   selectedImage: {fileID: 370426617}
   soldOut: {fileID: 1925898235}
@@ -1639,24 +1643,38 @@ MonoBehaviour:
   - animalName: Zebra
     icon: {fileID: 21300000, guid: f3185c8efb6ed28468ea84285001dd9f, type: 3}
     price: 35
+    animalBuilding: {fileID: 1060189761715644, guid: 53555ed7a2134fa4e81250b96058d906,
+      type: 2}
   - animalName: Lion
     icon: {fileID: 21300000, guid: abe288088ed48184e8a4c2b10ba51012, type: 3}
     price: 32
+    animalBuilding: {fileID: 1347257179287814, guid: 9871a874e54daf14b99e7ef08d02a75b,
+      type: 2}
   - animalName: Giraffe
     icon: {fileID: 21300000, guid: 9902847ecf25d9f4085ae54a26bcded9, type: 3}
     price: 54
+    animalBuilding: {fileID: 1681502423562138, guid: 991ef863a82025c4f99c07840a147834,
+      type: 2}
   - animalName: Elephant
     icon: {fileID: 21300000, guid: 730cc4bfac8dcfb4ba33a172ddf1f173, type: 3}
     price: 343
+    animalBuilding: {fileID: 1037492639638120, guid: e6d05a8e4528518478de887b12d5f253,
+      type: 2}
   - animalName: Alligator
     icon: {fileID: 21300000, guid: 52c276af56d00934b92e64a21788bcbc, type: 3}
     price: 0
+    animalBuilding: {fileID: 1060189761715644, guid: 53555ed7a2134fa4e81250b96058d906,
+      type: 2}
   - animalName: Rhino
     icon: {fileID: 21300000, guid: f61c6b80aaf197f42a275c65986f33a6, type: 3}
     price: 0
+    animalBuilding: {fileID: 1347257179287814, guid: 9871a874e54daf14b99e7ef08d02a75b,
+      type: 2}
   - animalName: Gorilla
     icon: {fileID: 21300000, guid: 5f73104da449ced4d8cdb109ef0d03c3, type: 3}
     price: 0
+    animalBuilding: {fileID: 1681502423562138, guid: 991ef863a82025c4f99c07840a147834,
+      type: 2}
 --- !u!1 &1007110744
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,7 +2752,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 994407614}
         m_MethodName: Purchase
         m_Mode: 1
         m_Arguments:
@@ -3279,7 +3297,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 994407614}
         m_MethodName: Close
         m_Mode: 1
         m_Arguments:
@@ -4047,7 +4065,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 994407614}
         m_MethodName: RightClick
         m_Mode: 1
         m_Arguments:
