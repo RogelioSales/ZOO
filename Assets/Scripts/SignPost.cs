@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class SignPost : MonoBehaviour
 {
+    public GameObject signPostSprite;
+    public Transform spawnPoint;
     [SerializeField]
     private GameObject purchasePanel;
     [SerializeField]
@@ -19,8 +21,8 @@ public class SignPost : MonoBehaviour
     private Text NotEnough;
     [SerializeField]
     private List<SelectionScript> animalList;
-   
 
+    private BuildingScript buildings;
     private int itemSpot;
 
     // Use this for initialization
@@ -49,10 +51,11 @@ public class SignPost : MonoBehaviour
         if (DataHolding.MoneyGained >= selection.price)
         {
             DataHolding.MoneyGained -= selection.price;
+            DataHolding.AudienceCount++;
+ 
             soldOut.SetActive(true);
             AnimalRemoved(animalList[itemSpot], this);
-            purchasePanel.SetActive(false);
-            
+            purchasePanel.SetActive(false);            
         }
         else
         {

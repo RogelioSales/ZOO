@@ -8,5 +8,6 @@ public class SelectionScript
     public string animalName;
     public Sprite icon;
     public float price;
+    
 	
 }
