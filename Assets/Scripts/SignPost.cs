@@ -16,6 +16,8 @@ public class SignPost : MonoBehaviour
     [SerializeField]
     private Button purchaseButton;
     [SerializeField]
+    private Text NotEnough;
+    [SerializeField]
     private List<SelectionScript> animalList;
    
 
@@ -26,6 +28,7 @@ public class SignPost : MonoBehaviour
     {
         purchasePanel.SetActive(false);
         soldOut.SetActive(false);
+        NotEnough.enabled = false;
    
     } 
     private void Refresh()
@@ -53,7 +56,7 @@ public class SignPost : MonoBehaviour
         }
         else
         {
-
+            NotEnough.enabled = true;
         }
     }
     public void LeftClick()
@@ -90,6 +93,7 @@ public class SignPost : MonoBehaviour
     public void Close()
     {
         purchasePanel.SetActive(false);
+        NotEnough.enabled = false;
         Time.timeScale = 1;
 
     }
