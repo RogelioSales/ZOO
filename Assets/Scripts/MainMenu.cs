@@ -14,6 +14,8 @@ public class MainMenu : MonoBehaviour
     private InputField inputField;
     [SerializeField]
     private Button okButton;
+    [SerializeField]
+    private GameObject CreditsPanel;
     
 
     private static string nameForZoo;
@@ -27,6 +29,7 @@ public class MainMenu : MonoBehaviour
         named = false;
         mainMenuPanel.SetActive(true);
         startPanel.SetActive(false);
+        CreditsPanel.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -66,5 +69,19 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
 
+    }
+    public void Back()
+    {
+        mainMenuPanel.SetActive(true);
+        CreditsPanel.SetActive(false);
+    }
+    public void Credits()
+    {
+        mainMenuPanel.SetActive(false);
+        CreditsPanel.SetActive(true);
+    }
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
