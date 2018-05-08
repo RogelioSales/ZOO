@@ -1648,37 +1648,37 @@ MonoBehaviour:
   - animalName: Zebra
     icon: {fileID: 21300000, guid: 2486fac393afb7d4386e17179658742c, type: 3}
     price: 35
-    animalBuilding: {fileID: 1060189761715644, guid: 53555ed7a2134fa4e81250b96058d906,
+    animalBuilding: {fileID: 1037492639638120, guid: e6d05a8e4528518478de887b12d5f253,
       type: 2}
   - animalName: Lion
     icon: {fileID: 21300000, guid: f1156e4b09fc022498cbf3764b2781fe, type: 3}
-    price: 32
-    animalBuilding: {fileID: 1347257179287814, guid: 9871a874e54daf14b99e7ef08d02a75b,
+    price: 30
+    animalBuilding: {fileID: 1681502423562138, guid: 991ef863a82025c4f99c07840a147834,
       type: 2}
   - animalName: Giraffe
     icon: {fileID: 21300000, guid: 5768e51b215efc64fbaf0f0c6e1f35b7, type: 3}
-    price: 54
-    animalBuilding: {fileID: 1681502423562138, guid: 991ef863a82025c4f99c07840a147834,
+    price: 25
+    animalBuilding: {fileID: 1347257179287814, guid: 9871a874e54daf14b99e7ef08d02a75b,
       type: 2}
   - animalName: Elephant
     icon: {fileID: 21300000, guid: dfba97197723f3846b7c86f1b8bf48bc, type: 3}
-    price: 343
-    animalBuilding: {fileID: 1037492639638120, guid: e6d05a8e4528518478de887b12d5f253,
+    price: 49
+    animalBuilding: {fileID: 1060189761715644, guid: 53555ed7a2134fa4e81250b96058d906,
       type: 2}
   - animalName: Alligator
     icon: {fileID: 21300000, guid: 35a653c5766b72f46a822115639f988a, type: 3}
-    price: 0
-    animalBuilding: {fileID: 1060189761715644, guid: 53555ed7a2134fa4e81250b96058d906,
+    price: 20
+    animalBuilding: {fileID: 1772138679128686, guid: 50210ef47e4a1da42870e0c43c2158c8,
       type: 2}
   - animalName: Rhino
     icon: {fileID: 21300000, guid: b36b29cdc31fac041963f1f7633ceedb, type: 3}
-    price: 0
-    animalBuilding: {fileID: 1347257179287814, guid: 9871a874e54daf14b99e7ef08d02a75b,
+    price: 50
+    animalBuilding: {fileID: 1451063542065962, guid: 7d69fbe98f4e572448b6f3d06a2d6957,
       type: 2}
   - animalName: Gorilla
     icon: {fileID: 21300000, guid: 274e74261c09b0e4f800d26f78b94c20, type: 3}
-    price: 0
-    animalBuilding: {fileID: 1681502423562138, guid: 991ef863a82025c4f99c07840a147834,
+    price: 45
+    animalBuilding: {fileID: 1520500537643898, guid: 3cc6d915ba66292418116ba6ebbb27b3,
       type: 2}
 --- !u!1 &1007110744
 GameObject:
@@ -2583,8 +2583,8 @@ MonoBehaviour:
   audience: 0
   minaudience: 0
   maxaudience: 100
-  audienceGained: 0.5
-  audienceLoss: 0.5
+  audienceGained: 2
+  audienceLoss: 2
 --- !u!1 &1503769798
 GameObject:
   m_ObjectHideFlags: 0

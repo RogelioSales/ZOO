@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         DataHolding.MoneyGained = 30;
         DataHolding.FoodGained = 10;
         DataHolding.MedicalGained = 5;
-        DataHolding.AudienceCount = 20;
+        DataHolding.AudienceCount = 86;
 
         audienceValue = (int)DataHolding.AudienceCount;
         moneyValue = (int)DataHolding.MoneyGained;
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
         }
         else if (DataHolding.AudienceCount > 75f)
         {
-            audience += audienceGained * Time.deltaTime;
+            audience -= audienceGained * Time.deltaTime;
             audienceValue = (int)audience;
             DataHolding.AudienceCount = audience + DataHolding.AudienceCount;
             audienceValue = (int)DataHolding.AudienceCount;
