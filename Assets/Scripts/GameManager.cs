@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
             if (DataHolding.AudienceCount <= minaudience)
             {
                 Debug.Log("Lost");
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(3);
             }
         }
         else if (DataHolding.AudienceCount > 75f)
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
             if (DataHolding.AudienceCount >= maxaudience)
             {
                 Debug.Log("Won");
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(2);
             }
         }
         
