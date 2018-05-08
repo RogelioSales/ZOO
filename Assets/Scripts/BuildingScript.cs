@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildingScript : MonoBehaviour
+[System.Serializable]
+public class BuildingScript
 {
-    public GameObject signPostSprite;
-    public Transform spawnPoint;
+    public GameObject buttons;
+    public GameObject spawnPoint;
 
 }

@@ -1627,18 +1627,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750ba2b1c269d8c4a926a3515e88dd78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttons:
-  - {fileID: 1742528832}
-  - {fileID: 1568459512}
-  - {fileID: 1445642110}
-  - {fileID: 1670161204}
-  - {fileID: 1141887661}
   purchasePanel: {fileID: 994407610}
   selectedImage: {fileID: 370426617}
   soldOut: {fileID: 1925898235}
   animalText: {fileID: 281513791}
   purchaseButton: {fileID: 1542452885}
   NotEnough: {fileID: 1317831353}
+  buildingList:
+  - buttons: {fileID: 1742528832}
+    spawnPoint: {fileID: 1446466150}
+  - buttons: {fileID: 1568459512}
+    spawnPoint: {fileID: 896104950}
+  - buttons: {fileID: 1568459512}
+    spawnPoint: {fileID: 896104950}
+  - buttons: {fileID: 1568459512}
+    spawnPoint: {fileID: 896104950}
+  - buttons: {fileID: 1568459512}
+    spawnPoint: {fileID: 896104950}
   animalList:
   - animalName: Zebra
     icon: {fileID: 21300000, guid: f3185c8efb6ed28468ea84285001dd9f, type: 3}

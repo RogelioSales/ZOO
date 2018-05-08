@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SignPost : MonoBehaviour
 {
-    public GameObject[] buttons;
+   // public GameObject[] buttons;
     [SerializeField]
     private GameObject purchasePanel;
     [SerializeField]
@@ -19,10 +19,12 @@ public class SignPost : MonoBehaviour
     [SerializeField]
     private Text NotEnough;
     [SerializeField]
+    private List<BuildingScript> buildingList;
+    [SerializeField]
     private List<SelectionScript> animalList;
-
-    private BuildingScript buildings;
+    
     private int itemSpot;
+    private int buildingSpot;
 
     // Use this for initialization
     void Start()
@@ -38,6 +40,10 @@ public class SignPost : MonoBehaviour
         {
             SelectionScript selection = animalList[i];
         }
+        for (int b = 0; b < buildingList.Count; b++)
+        {
+            BuildingScript buildings = buildingList[b];
+        }
     }
     // Update is called once per frame
     void Update()
@@ -47,42 +53,37 @@ public class SignPost : MonoBehaviour
     public void Purchase()
     {
         SelectionScript selection = animalList[itemSpot];
+        BuildingScript buildings = buildingList[buildingSpot];
+
         if (DataHolding.MoneyGained >= selection.price)
         {
             DataHolding.MoneyGained -= selection.price;
             DataHolding.AudienceCount++;
             soldOut.SetActive(true);
+            
+            buildings.buttons.SetActive(false);
+            GameObject animalbuilding = Instantiate(selection.animalBuilding, buildings.spawnPoint.transform.position, Quaternion.Euler(0, 0, 0));
             AnimalRemoved(animalList[itemSpot], this);
+            ButtonRemoval(buildingList[buildingSpot], this);
             purchasePanel.SetActive(false);
+            Time.timeScale = 1;
 
-            //for (int i = 0; i < buttons.Length; i++)
+            //for (buildingSpot = 0; buildingSpot < buildingList.Count; buildingSpot++)
             //{
-            //    i = 0;
-            //    if (i == 0)
-            //    {                  
-            //    // GameObject animalBuildin = Instantiate(selection.animalBuilding, new Vector2(2, 2), Quaternion.Euler(2,3,5));
+            //    if (buildingSpot == 0)
+            //    {
+                    
+            //    }
+            //    else if (buildingSpot == 1)
+            //    {
+            //        BuildingScript buildings = buildingList[buildingSpot];
+            //        buildings.buttons.SetActive(false);
+            //        GameObject animalbuildin = Instantiate(selection.animalBuilding, buildings.spawnPoint.transform.position, Quaternion.Euler(0, 0, 0));
+            //        buildingSpot++;
             //        AnimalRemoved(animalList[itemSpot], this);
             //        purchasePanel.SetActive(false);
             //    }
-            //    else if (i == 1 )
-            //    {
-            //        AnimalRemoved(animalList[itemSpot], this);
-            //        purchasePanel.SetActive(false);
-            //    }
-            //    else if (i == 2)
-            //    {
-            //        AnimalRemoved(animalList[itemSpot], this);
-            //        purchasePanel.SetActive(false);
-            //    }
-            //    else if (buttons[3])
-            //    {
-            //        AnimalRemoved(animalList[itemSpot], this);
-            //        purchasePanel.SetActive(false);
-            //    }
-            //    else if (buttons[4])
-            //    {
-            //    }
-            //}
+            //}      
         }
         else
         {
@@ -134,6 +135,16 @@ public class SignPost : MonoBehaviour
             if(signpost.animalList[i] == selectionRemove)
             {
                 signpost.animalList.RemoveAt(i);
+            }
+        }
+    }
+    private void ButtonRemoval(BuildingScript buttonRemoved, SignPost signPost)
+    {
+        for (int i = signPost.buildingList.Count - 1; i >= 0; i--)
+        {
+            if(signPost.buildingList[i] == buttonRemoved)
+            {
+                signPost.buildingList.RemoveAt(i);
             }
         }
     }
