@@ -100,6 +100,7 @@ public class SignPost : MonoBehaviour
             selectedImage.sprite = selection.icon;
             purchaseButton.interactable = true;
             soldOut.SetActive(false);
+            NotEnough.enabled = false;
         }
     }
     public void RightClick()
@@ -112,12 +113,14 @@ public class SignPost : MonoBehaviour
             selectedImage.sprite = selection.icon;
             purchaseButton.interactable = true;
             soldOut.SetActive(false);
+            NotEnough.enabled = false;
         }
     }
     public void Open()
     {
         purchasePanel.SetActive(true);
         Time.timeScale = 0;
+        NotEnough.enabled = false;
         purchaseButton.interactable = false;
         
     }
