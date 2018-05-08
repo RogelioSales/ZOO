@@ -940,7 +940,7 @@ MonoBehaviour:
   medicalBuildig: {fileID: 521340456}
   medicalCount: {fileID: 1160246815}
   medical: 1
-  medicalGainedInTime: 0.2
+  medicalGainedInTime: 0.5
   maxMedicalInStorage: 30
 --- !u!95 &521340460
 Animator:
@@ -1271,7 +1271,7 @@ MonoBehaviour:
   moneyBuildig: {fileID: 634144159}
   moneyCount: {fileID: 1114273889}
   money: 5
-  moneyGainedInTime: 1
+  moneyGainedInTime: 2
   maxMoneyInStorage: 50
 --- !u!95 &634144163
 Animator:
@@ -2583,8 +2583,8 @@ MonoBehaviour:
   audience: 0
   minaudience: 0
   maxaudience: 100
-  audienceGained: 2
-  audienceLoss: 2
+  audienceGained: 1.5
+  audienceLoss: 1.5
 --- !u!1 &1503769798
 GameObject:
   m_ObjectHideFlags: 0

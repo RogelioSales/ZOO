@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodIcon: {fileID: 1061038699598800}
   MedicalIcon: {fileID: 1455500695212578}
-  amountofAudienceGained: 2
+  amountofAudienceGained: 1
   amountofFoodloss: 1
   amountofMedicalLoss: 1
 --- !u!212 &212637406206336300

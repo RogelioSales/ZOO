@@ -142,7 +142,7 @@ MonoBehaviour:
   MedicalIcon: {fileID: 1184482345418060}
   amountofAudienceGained: 4
   amountofFoodloss: 5
-  amountofMedicalLoss: 1
+  amountofMedicalLoss: 2
 --- !u!212 &212229968085214640
 SpriteRenderer:
   m_ObjectHideFlags: 1
